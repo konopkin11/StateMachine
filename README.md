@@ -1,4 +1,4 @@
-# tilekiller
+# tilekiller (Finite state machine)
  
 Опен ворлд игра
 
