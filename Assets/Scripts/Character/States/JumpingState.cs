@@ -5,6 +5,8 @@ namespace Character.States
     public class JumpingState : StateCharacter
     {
         private bool grounded;
+        private int jumpParam = Animator.StringToHash("Jump");
+        private int landParam = Animator.StringToHash("Land");
         public JumpingState(Character character, StateMachineCharacter stateMachine) : base(character, stateMachine)
         {
         }
@@ -32,6 +34,7 @@ namespace Character.States
             base.LogicUpdate();
             if (grounded)
             {
+                character.TriggerAnimation(landParam);
                 stateMachine.ChangeState(character.standing);
             }
         }
@@ -45,6 +48,7 @@ namespace Character.States
 
         private void Jump()
         {
+            character.TriggerAnimation(jumpParam);
             character.transform.Translate(Vector3.up * (character.CollisionOverlapRadius * 1.01f));
             character.ApplyImpulse(Vector3.up * character.JumpForce);
         }

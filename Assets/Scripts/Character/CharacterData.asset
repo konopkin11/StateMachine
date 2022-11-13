@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ecb1c365855b47068fd6eb272f173c2, type: 3}
   m_Name: CharacterData
   m_EditorClassIdentifier: 
-  movementSpeed: 100
-  crouchSpeed: 100
+  movementSpeed: 35
+  crouchSpeed: 20
   crouchColliderHeight: 2.5
   normalColliderHeight: 3
   rotationSpeed: 100
-  crouchRotationSpeed: 70
-  jumpForce: 3
+  crouchRotationSpeed: 50
+  jumpForce: 2
   diveForce: 30

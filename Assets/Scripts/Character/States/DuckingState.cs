@@ -14,7 +14,7 @@ namespace Character.States
         public override void Enter()
         {
             base.Enter();
-            //character.SetAnimationBool(character.crouchParam, true);
+            character.SetAnimationBool(character.crouchParam, true);
             speed = character.CrouchSpeed;
             rotationSpeed = character.CrouchRotationSpeed;
             character.ColliderSize = character.CrouchColliderHeight;
@@ -23,7 +23,7 @@ namespace Character.States
         public override void Exit()
         {
             base.Exit();
-           // character.SetAnimationBool(character.crouchParam, false);
+            character.SetAnimationBool(character.crouchParam, false);
             character.ColliderSize = character.NormalColliderHeight;
         }
 
